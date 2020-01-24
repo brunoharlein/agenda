@@ -1,4 +1,3 @@
-# coding: utf-8
 from .connection import Connection
 from .entities.event import Event
 
