@@ -26,3 +26,24 @@ class eventModel():
         for key, value in enumerate(events):
             events[key] = Event(value)
         return events
+
+    def get_single_event(self, date, hour):
+        """Get on event by date and hour from database
+            Obtenez sur l'événement par date et heure de la base de données"""
+        sql = """select * from event
+                 where event_date = %s
+                 and event_time = %s"""
+        self.db.initialize_connection()
+        self.db.cursor.execute(sql, (date, hour))
+        # we want a single event so we use fetch one
+        # nous voulons un seul événement, donc nous en utilisons un
+        event = self.db.cursor.fetchone()
+        self.db.close_connection()
+        # This function is used for checking
+        # Cette fonction est utilisée pour vérifier
+        # So if we find something we return an event object, otherwise false
+        # Donc, si nous trouvons quelque chose, nous retournons un objet événement, sinon false
+        if event:
+            return Event(event)
+        return False
+
