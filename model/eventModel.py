@@ -70,5 +70,16 @@ class eventModel():
         self.db.connection.commit()
         self.db.close_connection()
 
+    def update_event(self, event):
+        """Update and event object in the database
+            Mise à jour et objet événement dans la base de données"""
+        sql = """update event
+                 set title=%s, description=%s, event_date=%s, event_time=%s
+                 where event_id=%s"""
+        arguments = (event.title, event.description, event.event_date, event.event_time, event.event_id)
+        self.db.initialize_connection()
+        self.db.cursor.execute(sql, arguments)
+        self.db.connection.commit()
+        self.db.close_connection()
 
 
