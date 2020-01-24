@@ -58,4 +58,17 @@ class eventModel():
         self.db.connection.commit()
         self.db.close_connection()
 
+    def delete_event(self, date, hour):
+        """Delete an event from databse with date and hour
+            Supprimer un événement de la base de données avec la date et l'heure"""
+        sql = """delete from event
+                 where event_date = %s
+                 and event_time = %s"""
+        arguments = (date, hour)
+        self.db.initialize_connection()
+        self.db.cursor.execute(sql, arguments)
+        self.db.connection.commit()
+        self.db.close_connection()
+
+
 
