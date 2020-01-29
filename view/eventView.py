@@ -28,7 +28,7 @@ class eventView():
         event = Event()
         event.title = input('Titre : ')
         event.description = input('Description (optionnelle) : ')
-        event.event_date = input('Date (jj/mm/aaaa) : ')
+        event.event_date = input('Date (aaaa-mm-jj) : ')
         event.event_time = input('Heure (hh:mm) : ')
         # Check the hour of the new event is free
         while self.model.get_single_event(event.event_date, event.event_time):
