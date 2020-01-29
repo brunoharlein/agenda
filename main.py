@@ -15,7 +15,7 @@ from view.eventView import eventView
 # Introduction pour l'application
 os.system('cls' if os.name == 'nt' else 'clear')
 print("Bienvenue sur votre agenda personnel")
-time.sleep(3)
+time.sleep(1)
 
 # Set locale zone to France and get the current month and year to display right calendar
 # Réglez la zone locale sur la France et obtenez le mois et l'année en cours pour afficher le bon calendrier
