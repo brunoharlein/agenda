@@ -35,6 +35,7 @@ while action != 'q':
     print("Nous sommes le : {}".format(datetime.today().strftime('%d %B %Y')))
     print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
     # Print the current calendar
+    # 2, 1 sont des modifications pour l'affichage du calendrier
     print (calendar.month(currentYear, currentMonth, 2, 1))
     print("Que souhaitez vous gérer ? (v: voir, a: annuler, n: nouveau, m: modifier, s: suivant, p: précédent, q: quitter)")
     action = input(": ")
