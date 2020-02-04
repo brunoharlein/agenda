@@ -1,6 +1,6 @@
 class Event():
     """Class representing the event entity
-        Classe représentant l'entité événementielle"""
+        Classe représentant l'entité event"""
 
     def __init__(self, data=False):
         self.event_id = None
