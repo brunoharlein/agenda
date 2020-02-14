@@ -22,16 +22,16 @@ class Connection():
         """Instanciate a connection and a cursor and store them in the related attributs
             Instancier une connexion et un curseur et les stocker dans les attributs associés"""
         try:
-            self.connection = psycopg2.connect(user = Connection.USER,
-                                               port = Connection.PORT,
-                                               database = Connection.DATABASE)
+            self.connection = psycopg2.connect(user=Connection.USER,
+                                               port=Connection.PORT,
+                                               database=Connection.DATABASE)
             self.cursor = self.connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
-        except (Exception, psycopg2.Error) as error :
-            print ("Error while connecting to PostgreSQL", error)
+        except (Exception, psycopg2.Error) as error:
+            print("Impossible d'établir une connection à la BDD", error)
 
     def close_connection(self):
         """Close both connection and cursor
             Fermer la connexion et le curseur"""
-        if(self.connection):
+        if self.connection:
             self.cursor.close()
             self.connection.close()

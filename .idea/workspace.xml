@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4cd254f3-1805-49b2-bc41-41b4978cfe2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/eventModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/eventModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/eventView.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/eventView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="528" y="266" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581511410866">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="528" y="266" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581511410866" />
     <state x="378" y="187" key="DBNavigator.ProjectSettingsDialog" timestamp="1580297161082">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

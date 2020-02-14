@@ -1,8 +1,9 @@
 import os
 import time
-import calendar
 import locale
 from datetime import datetime
+import calendar
+
 
 from view.eventView import eventView
 
@@ -32,11 +33,12 @@ while action != 'q':
     view = eventView()
     os.system('cls' if os.name == 'nt' else 'clear')
     # Print the current date
-    print("Nous sommes le : {}".format(datetime.today().strftime('%d %B %Y')))
+    print("Nous sommes le : {}".format(datetime.today().strftime('%A %d %B %Y')))
     print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
     # Print the current calendar
     # 2, 1 sont des modifications pour l'affichage du calendrier
-    print (calendar.month(currentYear, currentMonth, 2, 1))
+    print(calendar.month(currentYear, currentMonth, 5, 1))
+    # print(calendar.calendar(2020, 2, 1, 6))
     print("Que souhaitez vous gérer ? (v: voir, a: annuler, n: nouveau, m: modifier, s: suivant, p: précédent, q: quitter)")
     action = input(": ")
     # Call the right action function according to user input

@@ -7,7 +7,7 @@ class eventModel():
 
     def __init__(self):
         # Create a instance of the connection class to acces the database
-        # Créer une instance de la classe de connexion pour accéder à la base de données
+        # Créer une instance de la classe connexion pour accéder à la base de données
         self.db = Connection()
 
     def get_events(self, date):

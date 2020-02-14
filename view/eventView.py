@@ -23,7 +23,7 @@ class eventView():
         input("Tapez sur une touche pour continuer")
 
     def new_event(self):
-        """Displays inputs to register a new event in the database
+        """Displays inputs to register a nsew event in the database
             Affiche les entrées pour enregistrer un nouvel événement dans la base de données"""
         event = Event()
         event.title = input('Titre : ')
@@ -53,7 +53,8 @@ class eventView():
             date = input("Jour de l'événement : ")
             hour = input("Heure de l'événement : ")
             event = self.model.get_single_event(date, hour)
-            if event : break
+            if event:
+                break
             print("Nous ne trouvons rien à cette date")
             choice = input("Tapez s pour arrêter, n'importe quelle touche pour continuer")
         # If we have found an event
@@ -66,10 +67,11 @@ class eventView():
                 print(event)
                 print("Tapez s pour arrêter")
                 attribut = input("Attribut à modifier : ")
-                if attribut == 's' : break
+                if attribut == 's':
+                    break
                 value = input("Nouvelle valeur : ")
                 # If he chooses to change the hour then we check the hour is free
-                # S'il choisit de changer l'heure, nous vérifions que l'heure est gratuite
+                # S'il choisit de changer l'heure, nous vérifions que l'heure est libre
                 if attribut == "event_time":
                     while self.model.get_single_event(event.event_date, value):
                         print("Vous avez déjà quelque chose à cette heure là !")
